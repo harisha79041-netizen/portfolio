@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harish A - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: { 
+                extend: { 
+                    colors: { 
+                        primary: '#2563eb', 
+                        secondary: '#1e40af', 
+                        dark: '#1e293b', 
+                        light: '#f8fafc', 
+                        gray: '#64748b' 
+                    },
+                    fontSize: {
+                        'hero': 'clamp(3.5rem, 6vw, 7rem)', // Even bigger for emphasis
+                        'subhero': 'clamp(1.75rem, 3.5vw, 3rem)',
+                        'desc': 'clamp(1.5rem, 3vw, 2rem)' // Bigger for the developer tagline
+                    }
+                } 
+            }
+        }
+    </script>
+    <style>
+        body { font-size: 1.2rem; } /* Slightly larger base for overall impact */
+        #three-canvas { z-index: 1; } /* Ensure Three.js canvas is behind content */
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white leading-relaxed antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 py-4 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex justify-between items-center">
+            <div class="text-3xl font-bold text-primary">HA</div>
+            <ul class="hidden md:flex space-x-8 list-none">
+                <li><a href="index.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">Home</a></li>
+                <li><a href="about.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">About</a></li>
+                <li><a href="skills.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">Skills</a></li>
+                <li><a href="projects.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">Projects</a></li>
+                <li><a href="experience.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">Experience</a></li>
+                <li><a href="contact.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">Contact</a></li>
+            </ul>
+            <!-- Mobile menu button (professional touch) -->
+            <button class="md:hidden text-primary text-2xl">&equiv;</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Developer-Themed Three.js Background -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 text-white text-center p-8 mt-16 relative overflow-hidden">
+        <!-- Three.js Canvas for Developer-Inspired 3D Background (Matrix-like Binary Rain) -->
+        <div id="three-canvas" class="absolute inset-0 w-full h-full"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4">
+            <h1 class="hero font-bold mb-6 drop-shadow-lg">HARISH A</h1>
+            <p class="subhero font-semibold mb-4 opacity-95">Student at CMR University</p>
+            <p class="desc mb-8 max-w-2xl mx-auto opacity-90 leading-relaxed font-medium">Full Stack Web Developer | AI Enthusiast | Problem Solver</p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="projects.html" class="px-8 py-4 bg-white text-primary font-bold text-lg rounded-lg hover:-translate-y-2 shadow-xl transition-all duration-300 transform">View Projects</a>
+                <a href="contact.html" class="px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white hover:text-primary transition-all duration-300">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 text-center py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-lg">&copy; 2025 Harish A. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Three.js Initialization Script (Developer-Themed: Matrix-Style Binary Rain) -->
+    <script>
+        // Three.js Setup for Professional Developer 3D Background
+        let scene, camera, renderer, particles;
+        const canvasContainer = document.getElementById('three-canvas');
+
+        function initThreeJS() {
+            // Scene
+            scene = new THREE.Scene();
+            scene.fog = new THREE.Fog(0x000000, 1, 100);
+
+            // Camera
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 5;
+
+            // Renderer
+            renderer = new THREE.WebGLRenderer({ alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(0x000000, 0); // Transparent background to show gradient
+            canvasContainer.appendChild(renderer.domElement);
+
+            // Create Particles (Developer-themed: Green binary/code rain effect)
+            const particleCount = 1500; // More particles for rain density
+            const geometry = new THREE.BufferGeometry();
+            const positions = new Float32Array(particleCount * 3);
+            const velocities = new Float32Array(particleCount); // For falling animation
+            const colors = new Float32Array(particleCount * 3);
+
+            for (let i = 0; i < particleCount; i++) {
+                const i3 = i * 3;
+                positions[i3] = (Math.random() - 0.5) * 20; // Random X
+                positions[i3 + 1] = Math.random() * 20 - 10; // Random Y (start above)
+                positions[i3 + 2] = (Math.random() - 0.5) * 20; // Random Z for depth
+
+                velocities[i] = (Math.random() * 0.02 + 0.01); // Random fall speed
+
+                // Matrix green binary colors (developer aesthetic)
+                const greenIntensity = Math.random() * 0.5 + 0.5;
+                colors[i3] = 0; // No red
+                colors[i3 + 1] = greenIntensity; // Green
+                colors[i3 + 2] = 0; // No blue
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+            const material = new THREE.PointsMaterial({ 
+                size: 0.015, 
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.8
+            });
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+
+            // Animate (falling rain effect)
+            animate();
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            const positions = particles.geometry.attributes.position.array;
+            for (let i = 0; i < positions.length; i += 3) {
+                positions[i + 1] -= 0.05; // Fall down (Y decreases)
+                if (positions[i + 1] < -10) { // Reset when fallen
+                    positions[i + 1] = 10; // Respawn at top
+                    positions[i] = (Math.random() - 0.5) * 20; // Random X reset
+                    positions[i + 2] = (Math.random() - 0.5) * 20; // Random Z reset
+                }
+            }
+            particles.geometry.attributes.position.needsUpdate = true;
+
+            // Subtle rotation for depth
+            particles.rotation.y += 0.0005;
+
+            renderer.render(scene, camera);
+        }
+
+        // Handle Resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Initialize on load
+        window.addEventListener('load', initThreeJS);
+    </script>
+</body>
+</html>

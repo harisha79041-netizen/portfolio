@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Harish A</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { 
+                extend: { 
+                    colors: { 
+                        primary: '#2563eb', 
+                        secondary: '#1e40af', 
+                        dark: '#1e293b', 
+                        light: '#f8fafc', 
+                        gray: '#64748b' 
+                    },
+                    fontSize: {
+                        'hero': 'clamp(3rem, 5vw, 6rem)',
+                        'subhero': 'clamp(1.5rem, 3vw, 2.5rem)',
+                        'desc': 'clamp(1.25rem, 2.5vw, 1.75rem)'
+                    }
+                } 
+            }
+        }
+    </script>
+    <style>
+        body { font-size: 1.1rem; } /* Base font size increase for professionalism */
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white leading-relaxed antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 py-4 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex justify-between items-center">
+            <div class="text-3xl font-bold text-primary">HA</div>
+            <ul class="hidden md:flex space-x-8 list-none">
+                <li><a href="index.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">Home</a></li>
+                <li><a href="about.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">About</a></li>
+                <li><a href="skills.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">Skills</a></li>
+                <li><a href="projects.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">Projects</a></li>
+                <li><a href="experience.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">Experience</a></li>
+                <li><a href="contact.html" class="text-dark font-semibold text-lg hover:text-primary transition-colors duration-300">Contact</a></li>
+            </ul>
+            <!-- Mobile menu button (professional touch) -->
+            <button class="md:hidden text-primary text-2xl">&equiv;</button>
+        </div>
+    </nav>
+
+    <!-- Header for About -->
+    <section class="min-h-64 flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 text-white text-center p-8 mt-16 relative">
+        <!-- Subtle overlay for depth -->
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="relative z-10">
+            <h1 class="hero font-bold mb-4 drop-shadow-lg">About Me</h1>
+            <p class="subhero font-semibold opacity-95">Get to know more about who I am and what I do</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="text-lg leading-loose text-gray">
+                    <p class="mb-6">I'm a motivated Computer Application student with hands-on experience in full-stack web development and database management. I completed a web development internship at Hope Foundation, where I built real-world applications using Python and Flask.</p>
+                    <p class="mb-6">My passion lies in creating accessible technology solutions that make a difference. I have strong expertise in modern web technologies including HTML, CSS, JavaScript, Three.js, and Python frameworks. I'm continuously expanding my technical skills through innovative projects.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-light p-6 sm:p-8 rounded-xl text-center border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="text-4xl font-bold text-primary mb-2">3+</div>
+                        <div class="text-gray text-sm font-medium">Projects Completed</div>
+                    </div>
+                    <div class="bg-light p-6 sm:p-8 rounded-xl text-center border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="text-4xl font-bold text-primary mb-2">2</div>
+                        <div class="text-gray text-sm font-medium">Months Internship</div>
+                    </div>
+                    <div class="bg-light p-6 sm:p-8 rounded-xl text-center border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="text-4xl font-bold text-primary mb-2">8+</div>
+                        <div class="text-gray text-sm font-medium">Technologies</div>
+                    </div>
+                    <div class="bg-light p-6 sm:p-8 rounded-xl text-center border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="text-4xl font-bold text-primary mb-2">100%</div>
+                        <div class="text-gray text-sm font-medium">Dedication</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 text-center py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-lg">&copy; 2025 Harish A. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

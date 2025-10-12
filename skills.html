@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Harish A</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { 
+                extend: { 
+                    colors: { 
+                        primary: '#2563eb', 
+                        secondary: '#1e40af', 
+                        dark: '#1e293b', 
+                        light: '#f8fafc', 
+                        gray: '#64748b' 
+                    },
+                    fontSize: {
+                        'hero': 'clamp(3rem, 5vw, 6rem)',
+                        'subhero': 'clamp(1.5rem, 3vw, 2.5rem)',
+                        'desc': 'clamp(1.25rem, 2.5vw, 1.75rem)'
+                    }
+                } 
+            }
+        }
+    </script>
+    <style>
+        body { font-size: 1.1rem; } /* Base font size increase for professionalism */
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white leading-relaxed">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50 py-4">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">HA</div>
+            <ul class="flex space-x-8 list-none">
+                <li><a href="index.html" class="text-dark font-medium hover:text-primary transition-colors">Home</a></li>
+                <li><a href="about.html" class="text-dark font-medium hover:text-primary transition-colors">About</a></li>
+                <li><a href="skills.html" class="text-dark font-medium hover:text-primary transition-colors">Skills</a></li>
+                <li><a href="projects.html" class="text-dark font-medium hover:text-primary transition-colors">Projects</a></li>
+                <li><a href="experience.html" class="text-dark font-medium hover:text-primary transition-colors">Experience</a></li>
+                <li><a href="contact.html" class="text-dark font-medium hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header for Skills -->
+    <section class="min-h-64 flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 text-white text-center p-8 mt-16">
+        <div>
+            <h1 class="text-5xl md:text-4xl font-bold mb-4">Technical Skills</h1>
+            <p class="text-xl md:text-lg">Technologies and tools I work with</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 px-8 bg-light">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl border border-gray-200 hover:-translate-y-2 transition-all shadow-md">
+                    <div class="text-5xl mb-4">💻</div>
+                    <h3 class="text-xl font-semibold text-dark mb-4">Programming Languages</h3>
+                    <p class="text-gray leading-relaxed">C, Java, Python, JavaScript</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl border border-gray-200 hover:-translate-y-2 transition-all shadow-md">
+                    <div class="text-5xl mb-4">🌐</div>
+                    <h3 class="text-xl font-semibold text-dark mb-4">Web Development</h3>
+                    <p class="text-gray leading-relaxed">HTML, CSS, Tailwind CSS, Flask, JavaScript</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl border border-gray-200 hover:-translate-y-2 transition-all shadow-md">
+                    <div class="text-5xl mb-4">🗄️</div>
+                    <h3 class="text-xl font-semibold text-dark mb-4">Database</h3>
+                    <p class="text-gray leading-relaxed">MySQL, SQLite, DBMS</p>
+                </div>
+                <!-- Add more if needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 text-center py-8">
+        <p>&copy; 2025 Harish A. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

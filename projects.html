@@ -1,140 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Harish A</title>
-     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: { 
-                extend: { 
-                    colors: { 
-                        primary: '#2563eb', 
-                        secondary: '#1e40af', 
-                        dark: '#1e293b', 
-                        light: '#f8fafc', 
-                        gray: '#64748b' 
-                    },
-                    fontSize: {
-                        'hero': 'clamp(3rem, 5vw, 6rem)',
-                        'subhero': 'clamp(1.5rem, 3vw, 2.5rem)',
-                        'desc': 'clamp(1.25rem, 2.5vw, 1.75rem)'
-                    }
-                } 
-            }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Harish A</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            secondary: '#1e40af',
+            dark: '#1e293b',
+            light: '#f8fafc',
+            gray: '#64748b'
+          },
+          fontSize: {
+            hero: 'clamp(3rem, 5vw, 6rem)',
+            subhero: 'clamp(1.5rem, 3vw, 2.5rem)',
+            desc: 'clamp(1.25rem, 2.5vw, 1.75rem)'
+          }
         }
-    </script>
-    <style>
-        body { font-size: 1.1rem; } /* Base font size increase for professionalism */
-    </style>
+      }
+    }
+  </script>
+
+  <!-- Additional Styling -->
+  <style>
+    body {
+      font-size: 1.1rem;
+      scroll-behavior: smooth;
+    }
+
+    .project-desc {
+      hyphens: auto;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .emoji-shadow {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
 </head>
+
 <body class="font-sans text-gray-900 bg-white leading-relaxed">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full top-0 z-50 py-4">
-        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
-            <div class="text-2xl font-bold text-primary">HA</div>
-            <ul class="flex space-x-8 list-none">
-                <li><a href="index.html" class="text-dark font-medium hover:text-primary transition-colors">Home</a></li>
-                <li><a href="about.html" class="text-dark font-medium hover:text-primary transition-colors">About</a></li>
-                <li><a href="skills.html" class="text-dark font-medium hover:text-primary transition-colors">Skills</a></li>
-                <li><a href="projects.html" class="text-dark font-medium hover:text-primary transition-colors">Projects</a></li>
-                <li><a href="experience.html" class="text-dark font-medium hover:text-primary transition-colors">Experience</a></li>
-                <li><a href="contact.html" class="text-dark font-medium hover:text-primary transition-colors">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero-like Header for Projects -->
-    <section class="min-h-64 flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 text-white text-center p-8 mt-16">
-        <div>
-            <h1 class="text-5xl md:text-4xl font-bold mb-4">Featured Projects</h1>
-            <p class="text-xl md:text-lg">Some of my recent work as a fresher developer</p>
-        </div>
-    </section>
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md fixed w-full top-0 z-50 py-4">
+    <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+      <div class="text-2xl font-bold text-primary">Welcome to my Website</div>
+      <ul class="flex space-x-8 list-none">
+        <li><a href="index.html" class="text-dark font-medium hover:text-primary transition-colors">Home</a></li>
+        <li><a href="about.html" class="text-dark font-medium hover:text-primary transition-colors">About</a></li>
+        <li><a href="skills.html" class="text-dark font-medium hover:text-primary transition-colors">Skills</a></li>
+        <li><a href="projects.html" class="text-dark font-medium hover:text-primary transition-colors">Projects</a></li>
+        <li><a href="experience.html" class="text-dark font-medium hover:text-primary transition-colors">Experience</a></li>
+        <li><a href="contact.html" class="text-dark font-medium hover:text-primary transition-colors">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Projects Grid -->
-    <section class="py-20 px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:-translate-y-3 transition-all shadow-lg">
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-6xl relative">
-                        <!-- Canva Project Image Placeholder: Export a mockup from Canva -->
-                        <img src="project1-canva-mockup.png" alt="Voice to Voiceless Chatbot" class="absolute inset-0 w-full h-full object-cover opacity-50">
-                        <span class="relative z-10">🤖</span>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold text-dark mb-4">Voice to Voiceless - AI Chatbot</h3>
-                        <p class="text-gray mb-6 leading-relaxed">AI-powered chatbot designed to help individuals communicate effectively through an accessible text-based interface with intelligent conversation handling.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Flask</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">SQLite</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">HTML/CSS</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <a href="https://github.com/harisha79041-netizen/ai-chat-bot" class="px-6 py-3 bg-dark text-white font-semibold rounded-md hover:bg-primary transition-colors" target="_blank">GitHub</a>
-                            <a href="#" class="px-6 py-3 bg-light text-primary font-semibold rounded-md border-2 border-primary hover:bg-primary hover:text-white transition-colors">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
+  <!-- Projects Header -->
+  <section class="min-h-64 flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 text-white text-center p-8 mt-16">
+    <div>
+      <h1 class="text-5xl md:text-4xl font-bold mb-4">Featured Projects</h1>
+      <p class="text-xl md:text-lg">Some of my recent work as a fresher developer</p>
+    </div>
+  </section>
 
-                <!-- Project 2 -->
-                <div class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:-translate-y-3 transition-all shadow-lg">
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-6xl relative">
-                        <!-- Canva Project Image Placeholder -->
-                        <img src="project2-canva-mockup.png" alt="3D Solar System" class="absolute inset-0 w-full h-full object-cover opacity-50">
-                        <span class="relative z-10">🌌</span>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold text-dark mb-4">3D Solar System Visualization</h3>
-                        <p class="text-gray mb-6 leading-relaxed">Interactive 3D web application providing an immersive educational experience with realistic planet models, orbital animations, and user controls.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Three.js</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Flask</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Tailwind CSS</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <a href="https://github.com/harisha79041-netizen/3d-solar-system" class="px-6 py-3 bg-dark text-white font-semibold rounded-md hover:bg-primary transition-colors" target="_blank">GitHub</a>
-                            <a href="#" class="px-6 py-3 bg-light text-primary font-semibold rounded-md border-2 border-primary hover:bg-primary hover:text-white transition-colors">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
+  <!-- Projects Section -->
+  <section class="py-20 px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Project 3 -->
-                <div class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:-translate-y-3 transition-all shadow-lg">
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-6xl relative">
-                        <!-- Canva Project Image Placeholder -->
-                        <img src="project3-canva-mockup.png" alt="Weather App" class="absolute inset-0 w-full h-full object-cover opacity-50">
-                        <span class="relative z-10">🌤️</span>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold text-dark mb-4">Weather App</h3>
-                        <p class="text-gray mb-6 leading-relaxed">Secure web application providing real-time weather updates with login authentication, API integration for live data, and dynamic backgrounds.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">HTML</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">CSS</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Weather API</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <a href="https://github.com/harisha79041-netizen/weather" class="px-6 py-3 bg-dark text-white font-semibold rounded-md hover:bg-primary transition-colors" target="_blank">GitHub</a>
-                            <a href="#" class="px-6 py-3 bg-light text-primary font-semibold rounded-md border-2 border-primary hover:bg-primary hover:text-white transition-colors">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Project 1 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:-translate-y-3 hover:scale-105 transition-all duration-300 shadow-lg">
+          <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex flex-col items-center justify-start pt-4 pb-8">
+            <span class="text-7xl emoji-shadow mb-2">🤖</span>
+            <div class="bg-white/80 backdrop-blur-sm p-3 rounded-md">
+              <h3 class="text-lg font-semibold text-gray-900 text-center">Voice to Voiceless - AI Chatbot</h3>
             </div>
+          </div>
+          <div class="p-8">
+            <p class="text-gray-800 mb-6 project-desc">
+              AI-powered chatbot that helps individuals communicate through a simple, accessible text-based interface with intelligent responses.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Python</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Flask</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">SQLite</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">HTML/CSS</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/harisha79041-netizen/ai-chat-bot" target="_blank" class="px-6 py-3 bg-dark text-white font-semibold rounded-md hover:bg-primary transition-colors">GitHub</a>
+              <a href="#" target="_blank" class="px-6 py-3 bg-light text-primary font-semibold rounded-md border-2 border-primary hover:bg-primary hover:text-white transition-colors">Live Demo</a>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 text-center py-8">
-        <p>&copy; 2025 Harish A. All Rights Reserved.</p>
-    </footer>
+        <!-- Project 2 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:-translate-y-3 hover:scale-105 transition-all duration-300 shadow-lg">
+          <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex flex-col items-center justify-start pt-4 pb-8">
+            <span class="text-7xl emoji-shadow mb-2">🌌</span>
+            <div class="bg-white/80 backdrop-blur-sm p-3 rounded-md">
+              <h3 class="text-lg font-semibold text-gray-900 text-center">3D Solar System Visualization</h3>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-gray-800 mb-6 project-desc">
+              An interactive 3D educational web application featuring realistic planet models, orbital motion, and user camera controls.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Three.js</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Python</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Flask</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Tailwind CSS</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/harisha79041-netizen/3d-solar-system" target="_blank" class="px-6 py-3 bg-dark text-white font-semibold rounded-md hover:bg-primary transition-colors">GitHub</a>
+              <a href="#" target="_blank" class="px-6 py-3 bg-light text-primary font-semibold rounded-md border-2 border-primary hover:bg-primary hover:text-white transition-colors">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-200 hover:-translate-y-3 hover:scale-105 transition-all duration-300 shadow-lg">
+          <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex flex-col items-center justify-start pt-4 pb-8">
+            <span class="text-7xl emoji-shadow mb-2">🌤️</span>
+            <div class="bg-white/80 backdrop-blur-sm p-3 rounded-md">
+              <h3 class="text-lg font-semibold text-gray-900 text-center">Weather App</h3>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-gray-800 mb-6 project-desc">
+              Web app providing real-time weather data with secure login, API integration, and adaptive visuals for locations.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Python</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">HTML</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">CSS</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+              <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium">Weather API</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/harisha79041-netizen/weather" target="_blank" class="px-6 py-3 bg-dark text-white font-semibold rounded-md hover:bg-primary transition-colors">GitHub</a>
+              <a href="#" target="_blank" class="px-6 py-3 bg-light text-primary font-semibold rounded-md border-2 border-primary hover:bg-primary hover:text-white transition-colors">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
